@@ -64,10 +64,15 @@ header{position:sticky;top:0;z-index:20;background:rgba(247,249,251,.85);backdro
 .hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.5rem}
 .guarantee{display:inline-flex;align-items:center;gap:.6rem;margin-top:2.5rem;border:1px solid rgba(0,227,253,.35);background:rgba(0,227,253,.08);color:var(--signal);border-radius:var(--r-full);padding:.5rem 1rem}
 .guarantee strong{font-weight:500}
-.price-line{margin-top:2.75rem;display:flex;gap:2.5rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem}
-.price-line div{min-width:140px}
+.price-line{margin-top:2.75rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem 3rem;border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem}
+.pl-head{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);font-weight:600}
+.pl-stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1rem}
+.pl-stats>div{min-width:140px}
 .price-line .num{font-size:28px;font-weight:600;letter-spacing:-.03em}
+.price-line .num-g{font-size:19px;letter-spacing:-.01em;color:var(--signal)}
 .price-line .label{color:#8f97ab;margin-top:.4rem}
+.pl-foot{margin:1.25rem 0 0;color:#8f97ab;font-size:14px}
+@media(max-width:900px){.price-line{grid-template-columns:1fr}}
 
 /* sections */
 section{padding:5rem 0}
