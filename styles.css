@@ -70,6 +70,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(247,249,251,.85);backdro
 .pl-stats>div{min-width:140px}
 .price-line .num{font-size:28px;font-weight:600;letter-spacing:-.03em}
 .price-line .num-g{font-size:19px;letter-spacing:-.01em;color:var(--signal)}
+.price-line .num-sm{font-size:20px;letter-spacing:-.01em}
 .price-line .label{color:#8f97ab;margin-top:.4rem}
 .pl-foot{margin:1.25rem 0 0;color:#8f97ab;font-size:14px}
 @media(max-width:900px){.price-line{grid-template-columns:1fr}}
