@@ -73,9 +73,9 @@ header{position:sticky;top:0;z-index:20;background:rgba(247,249,251,.85);backdro
 .price-line .num-sm{font-size:20px;letter-spacing:-.01em}
 .price-line .label{color:#8f97ab;margin-top:.4rem}
 .pl-foot{margin:1.25rem 0 0;color:#8f97ab;font-size:14px}
-.legend{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:.9rem;font-size:13px;color:#c8cedd}
-.legend span{display:inline-flex;align-items:center;gap:.45rem}
-.legend .sw{display:inline-block;width:12px;height:12px;border-radius:3px}
+.legend{display:flex;gap:1.1rem;flex-wrap:wrap;margin-top:.55rem;font-size:12px;color:#c8cedd}
+.legend span{display:inline-flex;align-items:center;gap:.35rem}
+.legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px}
 @media(max-width:900px){.price-line{grid-template-columns:1fr}}
 
 /* sections */
@@ -256,7 +256,7 @@ footer{border-top:1px solid var(--outline-variant);padding:2.5rem 0;background:v
 .visual .vcap{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--outline);margin:.9rem 0 0}
 .samplechip{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.06em;padding:.22rem .5rem;border-radius:2px;background:#FEF3C7;color:#B45309;margin-bottom:.9rem}
 .hero .visual{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.14)}
-.hero .visual .vcap{color:#8f97ab}
+.hero .visual .vcap{color:#8f97ab;margin-top:.4rem}
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;margin-top:3rem}
 .split.rev > :first-child{order:2}
 @media(max-width:900px){.split{grid-template-columns:1fr;gap:1.5rem}.split.rev > :first-child{order:0}}
