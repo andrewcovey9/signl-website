@@ -185,13 +185,15 @@
         <p>Send your monthly P&amp;L and balance sheet, or give us read-only access to your books. Every month you get back a self-contained report: what moved, what it means, and what to do about it. No dashboard to log into and no software to learn.</p>
       </div>
 
-      <div class="tabstrip">
-        <span class="on">Overview</span><span>Signals</span><span>P&amp;L</span><span>Costs</span><span>Cash Flow</span><span>Balance Sheet</span><span>Data Notes</span>
+      <div class="tabstrip" role="tablist" aria-label="Sample report views">
+        <button type="button" class="on" data-view="overview" role="tab" aria-selected="true">Overview</button><button type="button" data-view="signals" role="tab" aria-selected="false">Signals</button><button type="button" data-view="pnl" role="tab" aria-selected="false">P&amp;L</button><button type="button" data-view="costs" role="tab" aria-selected="false">Costs</button><button type="button" data-view="cashflow" role="tab" aria-selected="false">Cash Flow</button><button type="button" data-view="balance" role="tab" aria-selected="false">Balance Sheet</button><button type="button" data-view="datanotes" role="tab" aria-selected="false">Data Notes</button>
       </div>
 
       <div class="sample">
         <div class="sample-bar"><span>ILLUSTRATIVE SAMPLE &mdash; NOT A CLIENT&rsquo;S DATA</span><span>SIGNL PULSE</span></div>
-        <div class="sample-grid">
+        <div class="sview" data-view="overview">
+          <div class="sample-grid">
+
           <div class="panel">
             <h4>Money in</h4>
             <p class="cap">Sample figures &middot; last 12 months</p>
@@ -222,6 +224,146 @@
             <p class="cap">On every report</p>
             <p style="margin:0;color:#45464d;font-size:14px;max-width:80ch">Every pulse ends with the checks we ran, the tie-out against your own printed totals, and an explicit list of what the report deliberately does not claim. Where the statements cannot support a metric, we say so and say why, rather than quietly leaving it out.</p>
           </div>
+          </div>
+        </div>
+        <div class="sview" data-view="signals" hidden>
+          <div class="sample-grid">
+            <div class="panel fullpanel">
+              <h4>The findings, strongest first</h4>
+              <p class="cap">Sample wording &middot; five signals fired this month, the strongest four are here</p>
+              <div class="siggrid">
+                <div class="sigcard">
+                  <span class="chip">COST STRUCTURE</span>
+                  <h5>Payroll rose faster than revenue for three months running.</h5>
+                  <p>Payroll is taking a larger share of every dollar than it did at the start of the year, while revenue grew more slowly. Nothing here says it is wrong &mdash; a crew hired ahead of a busy season looks exactly like this.</p>
+                  <p class="lever"><b>Lever:</b> check whether the added hours are billable yet, or still ramping.</p>
+                </div>
+                <div class="sigcard">
+                  <span class="chip">REVENUE &amp; DEMAND</span>
+                  <h5>Growth is coming from one revenue line, not all of them.</h5>
+                  <p>Total revenue is up nine months in a row, but one line is doing most of the lifting. The others are roughly flat, so the headline number is less diversified than it looks.</p>
+                  <p class="lever"><b>Lever:</b> know which line is load-bearing before deciding where next year's effort goes.</p>
+                </div>
+                <div class="sigcard">
+                  <span class="chip">CASH &amp; LIQUIDITY</span>
+                  <h5>Cash is building faster than profit.</h5>
+                  <p>Month-end cash has climbed most of the year and finished August at $96,040. Collections are running ahead of the P&amp;L, which is what a healthy order book looks like on cash-basis books.</p>
+                  <p class="lever"><b>Lever:</b> decide what the cushion is for before it quietly becomes spending money.</p>
+                </div>
+                <div class="sigcard">
+                  <span class="chip">MARGIN &amp; PROFITABILITY</span>
+                  <h5>Gross margin held inside its usual band all year.</h5>
+                  <p>Pricing discipline is intact: margin never left its normal range, including through the busy months. This one is a confirmed strength, not a problem.</p>
+                  <p class="lever"><b>Lever:</b> whatever quoting did this year, write it down and repeat it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sview" data-view="pnl" hidden>
+          <div class="sample-grid">
+            <div class="panel fullpanel">
+              <h4>Profit &amp; loss</h4>
+              <p class="cap">Sample figures &middot; August, against July and last August</p>
+              <table class="stable">
+                <tr><th></th><th class="num">This month</th><th class="num">Last month</th><th class="num">Same month last year</th></tr>
+                <tr><td>Revenue</td><td class="num">$184,212</td><td class="num">$172,555</td><td class="num">$121,940</td></tr>
+                <tr><td>Cost of goods</td><td class="num">$41,900</td><td class="num">$40,120</td><td class="num">$29,480</td></tr>
+                <tr class="tot"><td>Gross profit</td><td class="num">$142,312</td><td class="num">$132,435</td><td class="num">$92,460</td></tr>
+                <tr><td>Payroll</td><td class="num">$66,010</td><td class="num">$63,240</td><td class="num">$44,300</td></tr>
+                <tr><td>Rent &amp; utilities</td><td class="num">$17,710</td><td class="num">$17,710</td><td class="num">$15,400</td></tr>
+                <tr><td>Marketing</td><td class="num">$12,880</td><td class="num">$14,620</td><td class="num">$6,100</td></tr>
+                <tr><td>Insurance</td><td class="num">$8,050</td><td class="num">$8,050</td><td class="num">$6,720</td></tr>
+                <tr><td>Everything else</td><td class="num">$14,490</td><td class="num">$10,560</td><td class="num">$6,600</td></tr>
+                <tr class="tot"><td>Operating income</td><td class="num">$23,172</td><td class="num">$18,255</td><td class="num">$13,340</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="sview" data-view="costs" hidden>
+          <div class="sample-grid">
+            <div class="panel">
+              <h4>Where the money went</h4>
+              <p class="cap">Sample figures &middot; share of total cost</p>
+              <div class="shrow"><span class="shname">Payroll</span><span class="shbar"><i style="width:41%"></i></span><span class="shpct">41%</span></div><div class="shrow"><span class="shname">Cost of goods</span><span class="shbar"><i style="width:26%"></i></span><span class="shpct">26%</span></div><div class="shrow"><span class="shname">Rent &amp; utilities</span><span class="shbar"><i style="width:11%"></i></span><span class="shpct">11%</span></div><div class="shrow"><span class="shname">Marketing</span><span class="shbar"><i style="width:8%"></i></span><span class="shpct">8%</span></div><div class="shrow"><span class="shname">Insurance</span><span class="shbar"><i style="width:5%"></i></span><span class="shpct">5%</span></div><div class="shrow"><span class="shname">Everything else</span><span class="shbar"><i style="width:9%"></i></span><span class="shpct">9%</span></div>
+            </div>
+            <div class="panel">
+              <h4>What moved</h4>
+              <p class="cap">Sample figures &middot; against last month</p>
+              <table class="stable">
+                <tr><th></th><th class="num">This month</th><th class="num">Change</th></tr>
+                <tr><td>Payroll</td><td class="num">$66,010</td><td class="num">+$2,770</td></tr>
+                <tr><td>Marketing</td><td class="num">$12,880</td><td class="num">-$1,740</td></tr>
+                <tr><td>Cost of goods</td><td class="num">$41,900</td><td class="num">+$1,780</td></tr>
+                <tr><td>Everything else</td><td class="num">$14,490</td><td class="num">+$3,930</td></tr>
+                <tr class="tot"><td>Total costs</td><td class="num">$161,040</td><td class="num">+$6,740</td></tr>
+              </table>
+              <p class="tablenote">The "everything else" jump is the one to ask about - small lines moving together hide in totals.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sview" data-view="cashflow" hidden>
+          <div class="sample-grid">
+            <div class="panel">
+              <h4>Month-end cash</h4>
+              <p class="cap">Sample figures &middot; last 12 months</p>
+              <svg viewBox="0 0 560 190" role="img" aria-label="Illustrative month-end cash line"><path d="M8.0,122.8 L57.5,133.0 L106.9,147.7 L156.4,127.4 L205.8,105.0 L255.3,111.7 L304.7,89.0 L354.2,99.1 L403.6,77.0 L453.1,55.8 L502.5,64.1 L552.0,29.3 L552.0,166 L8.0,166 Z" fill="rgba(69,196,233,.16)"/><path d="M8.0,122.8 L57.5,133.0 L106.9,147.7 L156.4,127.4 L205.8,105.0 L255.3,111.7 L304.7,89.0 L354.2,99.1 L403.6,77.0 L453.1,55.8 L502.5,64.1 L552.0,29.3" fill="none" stroke="#45C4E9" stroke-width="1.8"/><circle cx="8.0" cy="122.8" r="2.6" fill="#0F1C2E"/><circle cx="106.9" cy="147.7" r="2.6" fill="#0F1C2E"/><circle cx="205.8" cy="105.0" r="2.6" fill="#0F1C2E"/><circle cx="304.7" cy="89.0" r="2.6" fill="#0F1C2E"/><circle cx="403.6" cy="77.0" r="2.6" fill="#0F1C2E"/><circle cx="502.5" cy="64.1" r="2.6" fill="#0F1C2E"/><circle cx="552.0" cy="29.3" r="2.6" fill="#0F1C2E"/><text x="8.0" y="182" text-anchor="middle" class="cx">Sep</text><text x="106.9" y="182" text-anchor="middle" class="cx">Nov</text><text x="205.8" y="182" text-anchor="middle" class="cx">Jan</text><text x="304.7" y="182" text-anchor="middle" class="cx">Mar</text><text x="403.6" y="182" text-anchor="middle" class="cx">May</text><text x="502.5" y="182" text-anchor="middle" class="cx">Jul</text></svg>
+            </div>
+            <div class="panel">
+              <h4>In and out</h4>
+              <p class="cap">Sample figures &middot; month of August</p>
+              <table class="stable">
+                <tr><td>Collected from customers</td><td class="num">$178,540</td></tr>
+                <tr><td>Paid to people and vendors</td><td class="num">-$158,640</td></tr>
+                <tr><td>Loan principal</td><td class="num">-$2,380</td></tr>
+                <tr><td>Owner draw</td><td class="num">-$2,300</td></tr>
+                <tr class="tot"><td>Net cash</td><td class="num">+$15,220</td></tr>
+                <tr><td>Month-end cash</td><td class="num">$96,040</td></tr>
+              </table>
+              <p class="tablenote">Profit was $23,172 and cash gained $15,220. Both true - they answer different questions, which is why this page exists.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sview" data-view="balance" hidden>
+          <div class="sample-grid">
+            <div class="panel">
+              <h4>What you have</h4>
+              <p class="cap">Sample figures &middot; end of August</p>
+              <table class="stable">
+                <tr><td>Cash</td><td class="num">$96,040</td></tr>
+                <tr><td>Receivables</td><td class="num">$41,300</td></tr>
+                <tr><td>Equipment, net</td><td class="num">$58,200</td></tr>
+                <tr class="tot"><td>Total assets</td><td class="num">$195,540</td></tr>
+              </table>
+            </div>
+            <div class="panel">
+              <h4>What you owe</h4>
+              <p class="cap">Sample figures &middot; end of August</p>
+              <table class="stable">
+                <tr><td>Payables</td><td class="num">$22,150</td></tr>
+                <tr><td>Credit cards</td><td class="num">$8,900</td></tr>
+                <tr><td>Loan balance</td><td class="num">$44,300</td></tr>
+                <tr class="tot"><td>Total liabilities</td><td class="num">$75,350</td></tr>
+                <tr><td>Equity</td><td class="num">$120,190</td></tr>
+              </table>
+              <p class="tablenote">Working capital sits at $106,290, up from $92,400 in January. The cushion is growing faster than the debt is.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sview" data-view="datanotes" hidden>
+          <div class="sample-grid">
+            <div class="panel fullpanel">
+              <h4>What this report does and does not claim</h4>
+              <p class="cap">Sample wording &middot; every report ends here</p>
+              <div class="notelist">
+                <div class="nrow"><b>Checks run.</b><span>38 signals tested against this file. Five fired; the strongest four are on the Signals tab.</span></div>
+                <div class="nrow"><b>Stayed quiet, on purpose.</b><span>11 signals were suppressed with the reason recorded: six because the business is seasonal, three for cash-basis books, two below the materiality floor.</span></div>
+                <div class="nrow"><b>Tie-out.</b><span>Revenue per the books, $184,212, matches the P&amp;L total. Month-end cash, $96,040, matches the bank side of the balance sheet.</span></div>
+                <div class="nrow"><b>Not claimed.</b><span>No balance sheet before January, so working-capital trends cover eight months, not twelve. Nothing in this report reaches further back than the statements do.</span></div>
+                <div class="nrow"><b>Basis.</b><span>Cash-basis books. Receivables and payables come from the balance sheet only; nothing here treats them as revenue or cost.</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -229,8 +371,25 @@
         <span>Revenue &amp; demand</span><span>Margin &amp; profitability</span><span>Cost structure</span><span>Cash &amp; liquidity</span><span>Working capital</span><span>Owner &amp; related party</span><span>Data quality</span><span>Comparability</span>
       </div>
     </div>
+    <script>
+    (function(){
+      var strips=document.querySelectorAll('.tabstrip');
+      for(var i=0;i<strips.length;i++){(function(strip){
+        var sample=strip.parentNode.querySelector('.sample');
+        if(!sample)return;
+        var tabs=strip.querySelectorAll('button');
+        var views=sample.querySelectorAll('.sview');
+        for(var j=0;j<tabs.length;j++){(function(tab){
+          tab.addEventListener('click',function(){
+            for(var k=0;k<tabs.length;k++){tabs[k].classList.remove('on');tabs[k].setAttribute('aria-selected','false');}
+            tab.classList.add('on');tab.setAttribute('aria-selected','true');
+            for(var m=0;m<views.length;m++){views[m].hidden=views[m].getAttribute('data-view')!==tab.getAttribute('data-view');}
+          });
+        })(tabs[j]);}
+      })(strips[i]);}
+    })();
+    </script>
   </section>
-
 
 
   <section>
