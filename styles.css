@@ -349,3 +349,9 @@ footer{border-top:1px solid var(--outline-variant);padding:2.5rem 0;background:v
 .sec-head{position:relative}
 .sec-head > .label:first-child:before{content:"";display:block;width:28px;height:3px;border-radius:2px;background:var(--signal);margin-bottom:.75rem}
 .hero .label:before{content:"";display:block;width:28px;height:3px;border-radius:2px;background:var(--signal);margin-bottom:.75rem}
+
+/* guarantee pill refinement (Aug 2026): divider right of label, both texts centered, opaque bg, no eyebrow dash, bold 16px label, 19px sentence */
+.hero .guarantee{align-items:center;gap:0;background:linear-gradient(rgba(0,227,253,.08),rgba(0,227,253,.08)),var(--primary-container)}
+.hero .guarantee .label{margin-top:0;font-size:16px;line-height:27px;letter-spacing:.08em;font-weight:700;padding-right:.75rem;border-right:1px solid rgba(0,227,253,.45)}
+.hero .guarantee .label:before{content:none}
+.hero .guarantee strong{line-height:27px;font-size:19px;padding-left:.75rem}
